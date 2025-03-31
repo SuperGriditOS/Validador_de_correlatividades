@@ -12,6 +12,6 @@ public class Materia {
     }
 
     public boolean cumpleCorrelativas(Set<Materia> materiasAprobadas) {
-        return materiasAprobadas.containsAll(correlativas);
+        return materiasAprobadas.containsAll(correlativa);
     }
 }

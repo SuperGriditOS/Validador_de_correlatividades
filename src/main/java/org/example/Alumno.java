@@ -1,17 +1,18 @@
 package org.example;
 
 import java.util.List;
+import java.util.Set;
 
 public class Alumno {
     private String nombre;
     private String apellido;
-    private List<Materia> materiasAprobadas;
+    private Set<Materia> materiasAprobadas;
 
-    public List<Materia> getMateriasAprobadas() {
+    public Set<Materia> getMateriasAprobadas() {
         return materiasAprobadas;
     }
 
-    public void setMateriasAprobadas(List<Materia> materiasAprobadas) {
+    public void setMateriasAprobadas(Set<Materia> materiasAprobadas) {
         this.materiasAprobadas = materiasAprobadas;
     }
 

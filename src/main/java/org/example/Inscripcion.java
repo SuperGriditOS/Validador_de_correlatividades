@@ -13,12 +13,23 @@ public class Inscripcion {
         return fueAprobada;
     }
 
+    public Inscripcion(Set<Materia> materiasACursar, Boolean fueAprobada, Alumno alumno, LocalDateTime fechaDeEvaluacion) {
+        this.materiasACursar = materiasACursar;
+        this.fueAprobada = fueAprobada;
+        this.alumno = alumno;
+        this.fechaDeEvaluacion = fechaDeEvaluacion;
+    }
+
     public void setFueAprobada(Boolean fueAprobada) {
         this.fueAprobada = fueAprobada;
     }
 
-    private boolean aprobada(){
-        //TODO
-        return false;
+    public boolean aprobada() {
+        for (Materia materia : materiasACursar) {
+            if (!materia.cumpleCorrelativas(alumno.getMateriasAprobadas())) {
+                return false;
+            }
+        }
+        return true;
     }
 }
